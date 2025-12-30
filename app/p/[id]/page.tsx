@@ -7,8 +7,8 @@ export default async function PastePage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-
-  const raw = await redis.get(`paste:${id}`)
+  const key =`paste:${id}`
+  const raw = await redis.get(key)
   if (!raw) notFound()
 
   const paste = JSON.parse(raw)
@@ -16,6 +16,9 @@ export default async function PastePage({
 
   if (paste.expiresAtMs && now >= paste.expiresAtMs) notFound()
   if (paste.maxViews !== null && paste.views >= paste.maxViews) notFound()
+
+  paste.views += 1
+  await redis.set(key, JSON.stringify(paste))
 
   return (
     <main className="min-h-screen flex items-center justify-center px-4 bg-[#FFF7E6]">
