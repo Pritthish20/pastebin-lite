@@ -264,20 +264,14 @@ pastebin-lite/
 ├── tsconfig.json # TypeScript config
 └── package.json # Dependencies
 
-## 🙏 Acknowledgments
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Vercel Redis](https://vercel.com/docs/storage/vercel-kv)
-- [Tailwind CSS](https://tailwindcss.com)
-
 ---
 
 ## 📬 Contact
 
 For questions or feedback:
 
-- **GitHub**:(https://github.com/yourusername)
-- **Email**: your.email@example.com
+- **GitHub**:(https://github.com/Pritthish20)
+- **Email**: pritthishps20@gmail.com
 
 ---
 
@@ -285,6 +279,6 @@ For questions or feedback:
 
 **Built with ❤️ using Next.js and Redis**
 
-[Demo](https://your-app.vercel.app)
+[Demo](https://pastebin-lite-seven-eosin.vercel.app/)
 
 </div>
