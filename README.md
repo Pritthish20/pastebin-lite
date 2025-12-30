@@ -64,23 +64,6 @@ TTL: Set via EXPIRE if ttl_seconds provided
 
 ## 🚀 Running Locally
 
-<!-- ### Prerequisites
-
-- **Node.js** 18+ ([Download](https://nodejs.org/))
-- **Redis** running locally or cloud instance
-
-#### Install Redis (macOS)
-```bash
-brew install redis
-brew services start redis
-```
-
-#### Install Redis (Ubuntu/Debian)
-```bash
-sudo apt update
-sudo apt install redis-server
-sudo systemctl start redis
-``` -->
 
 ### Setup Instructions
 
@@ -202,25 +185,6 @@ Renders the paste content as HTML with:
 
 ---
 
-<!-- ## 🔒 Security Features
-
-### XSS Protection
-- Content rendered as plain text (`<pre>` tags)
-- No HTML parsing or script execution
-- React's built-in escaping
-
-### Rate Limiting
-```typescript
-// Implemented in middleware
-const RATE_LIMIT = 100; // requests per minute
-const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
-```
-
-### Input Validation
-- Content length: 1 - 100,000 characters
-- TTL range: 0 - 604,800 seconds (7 days)
-- Max views: 1 - 1,000,000 -->
-
 ---
 
 ## ⚡ Performance Optimizations
@@ -229,12 +193,10 @@ const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 
 - **Input debouncing** (300ms) prevents excessive re-renders
 - **Optimistic UI updates** for better perceived performance
-<!-- - **Lazy hydration** for paste view pages -->
 
 ### Server-Side
 
 - **Redis pipelining** for batch operations
-<!-- - **Edge caching** via Vercel Edge Network -->
 - **Connection pooling** for Redis (via `@vercel/kv`)
 
 ## 📂 Project Structure

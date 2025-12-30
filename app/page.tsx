@@ -17,11 +17,7 @@ function useDebouncedValueWithCommit<T>(value: T, delay = 300) {
 
     const timer = setTimeout(() => {
       setIsCommitting(true);
-
-      // Commit the value
       setDebouncedValue(value);
-
-      // Keep spinner visible for a short, perceptible time
       const commitTimer = setTimeout(() => {
         setIsCommitting(false);
       }, 200);
